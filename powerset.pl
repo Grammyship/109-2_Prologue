@@ -1,0 +1,1 @@
+powerset(Set,Subsets):- setof(S,sublist(S,Set),Subsets).

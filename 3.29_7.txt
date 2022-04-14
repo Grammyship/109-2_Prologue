@@ -1,0 +1,5 @@
+conc1([],L,L).
+conc1([X|L1],L2,[X|L3]):- conc1(L1,L2,L3).
+
+shiftNnumber( List1, 0, List2).
+shiftNnumber( [X|List1], N, List3):-conc(List1,[X],List2),shiftNnumber( List2, N-1, List3) .

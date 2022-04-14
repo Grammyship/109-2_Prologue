@@ -1,0 +1,7 @@
+length1( [], 0).
+length1( [ _| Tail], N) :- length1( Tail, N1), N is 1 + N1.
+
+p_sumlist([] , _ ).
+p_sumlist([X,Tail], Sum):- X>0, p_sumlist(Tail,Sum1) , Sum = Sum + X.
+
+possum( N_list, N, Sum):- length1(N_list ,N) , p_sumlist(N_list,Sum).

@@ -1,0 +1,2 @@
+sumlist([] , _ ).
+sumlist([X,Tail], Sum):- sumlist(Tail,Sum1) , Sum = Sum + X.
